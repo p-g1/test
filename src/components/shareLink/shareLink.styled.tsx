@@ -10,7 +10,7 @@ export const LinkContainer = styled.div`
   background: #EFEFEF;
 `;
 
-export const Link = styled.div`
+export const Link = styled.p`
   padding: 2px 10px;
   flex: 3;
 `;
@@ -29,4 +29,5 @@ export const Button = styled.button`
     color: white;
     border: none;
     height: 100%;
+    cursor: pointer;
 `;

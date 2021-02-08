@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-type CenterProps = {
+interface ICenterProps {
   center: boolean
 }
 
-export const Title = styled.h1<CenterProps>`
+export const Title = styled.h1<ICenterProps>`
   font-size: 3em;
   padding: 10px;
   margin: 0;

@@ -1,27 +1,27 @@
 import React, { useState, FC } from 'react';
 
-type messageIcon = {
+interface ImessageIcon {
     icon: number,
     message: string
 }
 
-type DefaultContext = {
+interface IDefaultContext {
     totalRewards: number,
-    messages: messageIcon[],
+    messages: ImessageIcon[],
     updateRewardCount: (newValue:number) => void
-    updateMessages: (newValue:messageIcon, messages:messageIcon[]) => void
+    updateMessages: (newValue: ImessageIcon, messages: ImessageIcon[]) => void
 }
 
-const initialState: DefaultContext = {
+const initialState: IDefaultContext = {
     totalRewards: 0, 
     messages: [], 
     updateRewardCount: () => {},
     updateMessages: () => {}
 };
 
-export let PageDataContext = React.createContext<DefaultContext>(initialState);
+export let PageDataContext = React.createContext<IDefaultContext>(initialState);
 
-type Props = {
+interface Props {
     children: React.ReactNode
 };
 
@@ -34,7 +34,7 @@ const PageDataProvider: FC<Props> = ({children}) => {
         setTotalRewards(newValue);
     }
 
-    const updateMessages = (newValue: messageIcon, messages: messageIcon[]) => {
+    const updateMessages = (newValue: ImessageIcon, messages: ImessageIcon[]) => {
         messages.unshift(newValue);
         setMessages([...messages]);
     }

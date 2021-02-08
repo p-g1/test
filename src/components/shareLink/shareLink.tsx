@@ -8,11 +8,17 @@ interface IShareLinkProps {
 }
 
 const ShareLink: FC<IShareLinkProps> = ({link}) => {
+  
+  function copyToClipboard() {
+      const text = document.getElementById("link")?.innerText || "";
+      navigator.clipboard.writeText(text);
+    };
+
     return (
         <LinkContainer>
-            <Link>{link}</Link> 
+            <Link id="link">{link}</Link> 
             <ButtonContainer>
-                <Button>
+                <Button onClick={copyToClipboard}>
                     <FontAwesomeIcon icon={faClipboard} size="2x" />
                 </Button>
             </ButtonContainer>

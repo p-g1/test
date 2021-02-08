@@ -5,9 +5,9 @@ import { PageDataContext } from '../../context/context';
 import { Content, InputHolder, ButtonHolder } from './friendPage.styled';
 import { Page, OuterPanel, InnerPanel, SmallHeader, StyledLink } from '../pageBase/pageBase.styled';
 
-type Props = {};
+interface IProps {};
 
-const FriendPage: FC<Props> = () => {
+const FriendPage: FC<IProps> = () => {
     const [name, setName] = useState('');
     const { friendPageHeader, nameInputHeader, rejectionMessage } = staticData;
     const {totalRewards, messages, updateRewardCount, updateMessages} = useContext(PageDataContext);

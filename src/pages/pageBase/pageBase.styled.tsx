@@ -34,11 +34,11 @@ export const SmallHeader = styled.div`
   margin: 10px;
 `;
 
-type TextAlignProps = {
+interface ITextAlignProps {
   textalign: string
 }
 
-export const StyledLink = styled(Link)<TextAlignProps>`
+export const StyledLink = styled(Link)<ITextAlignProps>`
   padding: 20px;
   color: #666666;
   font-weight: 700;
