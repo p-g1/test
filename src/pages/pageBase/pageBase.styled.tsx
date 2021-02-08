@@ -35,7 +35,7 @@ export const SmallHeader = styled.div`
 `;
 
 type TextAlignProps = {
-  textAlign: string
+  textalign: string
 }
 
 export const StyledLink = styled(Link)<TextAlignProps>`
@@ -43,7 +43,7 @@ export const StyledLink = styled(Link)<TextAlignProps>`
   color: #666666;
   font-weight: 700;
   width: 70%;
-  text-align: ${props => props.textAlign};
+  text-align: ${props => props.textalign};
   text-decoration: none;
   cursor: pointer;
 `;

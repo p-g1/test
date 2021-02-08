@@ -31,7 +31,7 @@ const FriendPage: FC<Props> = () => {
     return (
         <Page>
             <OuterPanel>
-                <StyledLink textAlign={"left"} to="/share">Share Page</StyledLink>
+                <StyledLink textalign={"left"} to="/share">Share Page</StyledLink>
                 <InnerPanel>
                     <Header title={friendPageHeader} center />
                     <Content>

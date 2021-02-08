@@ -14,7 +14,7 @@ const SharePage: FC = () => {
     return (
         <Page>
         <OuterPanel>
-            <StyledLink textAlign={"right"} to="/friend">Friend Page</StyledLink>
+            <StyledLink textalign={"right"} to="/friend">Friend Page</StyledLink>
             <InnerPanel>
                 <Header title={header} center={false} />
                 <SmallHeader>{linkHeader}</SmallHeader>

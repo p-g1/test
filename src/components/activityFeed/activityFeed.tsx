@@ -4,11 +4,11 @@ import FeedItem from '../feedItem/feedItem';
 import RewardsCount from '../rewardsCount/rewardsCount';
 import staticData from '../../staticData/staticData';
 import { PageDataContext } from '../../context/context';
-import { faSmile, faSadTear, faGrinSquint } from "@fortawesome/free-solid-svg-icons";
+import { faSmile, faSadTear, faGrinSquint, faMeh } from "@fortawesome/free-solid-svg-icons";
 
 const ActivityFeed: FC = () => {
 
-    const emojis = [faSmile, faSadTear, faGrinSquint];
+    const emojis = [faSmile, faSadTear, faGrinSquint, faMeh];
     const { totalRewards, messages } = useContext(PageDataContext);
     const { welcomeMessage, welcomeMessageWithReferrals, emptyActivityFeed, rewardCountHeader } = staticData;
 
@@ -25,7 +25,7 @@ const ActivityFeed: FC = () => {
                 {
                 messages.length ?
                     messages.map((item, i) => <FeedItem key={item.message + i} emoji={emojis[item.icon]} text={item.message}></FeedItem>)
-                    : <FeedItem text={emptyActivityFeed}></FeedItem>
+                    : <FeedItem emoji={emojis[3]} text={emptyActivityFeed}></FeedItem>
                     }
             </Panel>
             <RewardsCount 
