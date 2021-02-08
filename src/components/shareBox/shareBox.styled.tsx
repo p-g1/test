@@ -24,10 +24,16 @@ export const Button = styled.button`
     height: 22px;
     line-height: 0;
     outline: none;
+    border: none;
     cursor: pointer;
 
     &:disabled {
       cursor: not-allowed;
+      opacity: 0.2;
+    }
+
+    &:hover {
+      background: #366b01;
     }
 `;
 

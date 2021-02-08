@@ -13,5 +13,5 @@ export const Item = styled.div`
   display: flex; 
   align-items: center;
   padding: 2px 10px;
-  width: 290px;
+  width: 100%;
 `;

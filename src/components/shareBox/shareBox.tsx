@@ -13,6 +13,10 @@ const ShareBox: FC<ISocialBannerProps> = ({bannerItems}) => {
         setEmail(e.target.value);
       };
 
+    const updateEmailContent = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
+    setEmail(e.target.value);
+    };
+ 
     const handleSendEmailClick = (): void => {
         if(email && email === senderEmail ) {
             updateMessages({icon: 2, message: enteredOwnEmail}, messages)
@@ -23,8 +27,8 @@ const ShareBox: FC<ISocialBannerProps> = ({bannerItems}) => {
         <Panel>
             <SocialBanner bannerItems={bannerItems}/>
             <SenderInfo>From <Email>{senderEmail}</Email></SenderInfo>
-            <EmailInput value={email} readOnly onChange={e => updateEmail(e)} placeholder="Email address" />
-            <EmailText value={emailText} readOnly></EmailText>
+            <EmailInput value={email} onChange={e => updateEmail(e)} placeholder="Email address" />
+            <EmailText value={emailText} onChange={e => updateEmailContent(e)}></EmailText>
             <Button onClick={handleSendEmailClick} disabled={!email}>Send Email</Button>
         </Panel>
     )
