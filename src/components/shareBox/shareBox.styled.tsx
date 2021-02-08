@@ -13,13 +13,22 @@ export const Panel = styled.div`
 `;
 
 export const Button = styled.button`
-  color: white;
-  background: #509D01;
-  padding: 20px;
-
+    color: white;
+    background: #509D01;
+    padding: 20px;
     font-weight: 700;
     width: 40%;
-    height: 30px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    height: 22px;
+    line-height: 0;
+    outline: none;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
 `;
 
 export const Email = styled.strong`
@@ -29,18 +38,22 @@ export const Email = styled.strong`
 
 export const SenderInfo = styled.div`
   padding: 20px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  text-align: left;
 `;
 
 export const EmailInput = styled.input`
   padding: 10px;
-  width: 80%;
+  width: 86%;
   border: none;
   margin: 10px;
 `;
 
 export const EmailText = styled.textarea`
   padding: 10px;
-  width: 80%;
+  width: 86%;
+  height: 100px;
   border: none;
   margin: 10px;
 `;
