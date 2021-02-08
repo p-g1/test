@@ -32,7 +32,7 @@ export const Button = styled.button`
       opacity: 0.2;
     }
 
-    &:hover {
+    &:hover:not(:disabled) {
       background: #366b01;
     }
 `;
