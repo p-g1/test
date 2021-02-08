@@ -1,6 +1,7 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
 import { Item } from './socialBannerItem.styled';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export interface ISocialBannerItemProps {

@@ -9,7 +9,7 @@ type DefaultContext = {
 
 const initialState: DefaultContext = {
     totalRewards: 0, 
-    messages: [], 
+    messages: ["test"], 
     updateRewardCount: () => {},
     updateMessages: () => {}
 };
@@ -42,7 +42,7 @@ const PageDataProvider: FC<Props> = ({children}) => {
         updateMessages
     }
 
-    PageDataContext = React.createContext(contextValue);
+    // PageDataContext = React.createContext(contextValue);
     // console.log(PageDataContext);
     return (
         <PageDataContext.Provider value={contextValue}>
