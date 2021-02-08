@@ -31,3 +31,7 @@ export const Button = styled.button`
       cursor: not-allowed;
     }
 `;
+
+export const Input = styled.input`
+
+`;

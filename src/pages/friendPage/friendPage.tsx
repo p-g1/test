@@ -2,7 +2,7 @@ import React, { useState, useContext, FC } from 'react';
 import staticData from '../../staticData/staticData';
 import Header from '../../components/header/header';
 import { PageDataContext, IDefaultContext } from '../../context/context';
-import { Content, InputHolder, ButtonHolder, Button } from './friendPage.styled';
+import { Content, InputHolder, ButtonHolder, Button, Input } from './friendPage.styled';
 import { Page, OuterPanel, InnerPanel, SmallHeader, StyledLink } from '../pageBase/pageBase.styled';
 
 interface IProps {};
@@ -37,10 +37,10 @@ const FriendPage: FC<IProps> = () => {
                     <Content>
                         <InputHolder>
                         <SmallHeader>{nameInputHeader}</SmallHeader>
-                            <input data-testid={"emailInput"} value={name} onChange={e => updateName(e)}/>
+                            <Input data-testid={"emailInput"} value={name} onChange={e => updateName(e)}/>
                         </InputHolder>
                         <ButtonHolder>
-                            <Button data-testId={"claimButton"} onClick={handleClaimClick} disabled={!name}>Claim</Button>
+                            <Button data-testid={"claimButton"} onClick={handleClaimClick} disabled={!name}>Claim</Button>
                             <Button onClick={handleRejectClick} >Reject</Button>
                         </ButtonHolder>
                     </Content>
