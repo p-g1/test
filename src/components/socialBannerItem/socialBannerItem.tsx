@@ -1,19 +1,20 @@
 import React, { FC } from 'react';
 import { Item } from './socialBannerItem.styled';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faTwitter, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export interface ISocialBannerItemProps {
-    id: string,
+    id: number,
     background: string
 }
 
-const SocialBannerItem: FC<ISocialBannerItemProps> = ({background}) => {
+const SocialBannerItem: FC<ISocialBannerItemProps> = ({id, background}) => {
+    const icons = [faEnvelope, faFacebookF, faTwitter, faLinkedinIn]
 
     return (
         <Item background={background}>
-           <FontAwesomeIcon icon={faEnvelope} size="2x" /> 
+           <FontAwesomeIcon icon={icons[id]} size="2x" /> 
         </Item>  
     )
 }

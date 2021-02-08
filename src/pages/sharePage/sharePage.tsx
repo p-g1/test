@@ -4,7 +4,8 @@ import ShareBox from '../../components/shareBox/shareBox';
 import Header from '../../components/header/header';
 import staticData from '../../staticData/staticData';
 import { Content } from './sharePage.styled';
-import { Page, OuterPanel, InnerPanel, SmallHeader } from '../pageBase/pageBase.styled';
+import { Page, OuterPanel, InnerPanel, SmallHeader, StyledLink } from '../pageBase/pageBase.styled';
+
 
 const SharePage: FC = () => {
 
@@ -13,6 +14,7 @@ const SharePage: FC = () => {
     return (
         <Page>
         <OuterPanel>
+            <StyledLink textAlign={"right"} to="/friend">Friend Page</StyledLink>
             <InnerPanel>
                 <Header title={header} center={false} />
                 <SmallHeader>{linkHeader}</SmallHeader>

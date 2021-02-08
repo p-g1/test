@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Page = styled.div`
   width: 100vw;
@@ -14,6 +15,7 @@ export const OuterPanel = styled.div`
   width: 75vw;
   height: 90vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: #EFEFEF;
@@ -30,4 +32,18 @@ export const InnerPanel = styled.div`
 
 export const SmallHeader = styled.div`
   margin: 10px;
+`;
+
+type TextAlignProps = {
+  textAlign: string
+}
+
+export const StyledLink = styled(Link)<TextAlignProps>`
+  padding: 20px;
+  color: #666666;
+  font-weight: 700;
+  width: 70%;
+  text-align: ${props => props.textAlign};
+  text-decoration: none;
+  cursor: pointer;
 `;

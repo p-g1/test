@@ -24,7 +24,7 @@ const ActivityFeed: FC = () => {
             <Panel>
                 {
                 messages.length ?
-                    messages.map((item, i) => <FeedItem key={item + i} emoji={emojis[i]} text={item}></FeedItem>)
+                    messages.map((item, i) => <FeedItem key={item.message + i} emoji={emojis[item.icon]} text={item.message}></FeedItem>)
                     : <FeedItem text={emptyActivityFeed}></FeedItem>
                     }
             </Panel>

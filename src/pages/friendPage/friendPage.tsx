@@ -3,7 +3,7 @@ import staticData from '../../staticData/staticData';
 import Header from '../../components/header/header';
 import { PageDataContext } from '../../context/context';
 import { Content, InputHolder, ButtonHolder } from './friendPage.styled';
-import { Page, OuterPanel, InnerPanel, SmallHeader } from '../pageBase/pageBase.styled';
+import { Page, OuterPanel, InnerPanel, SmallHeader, StyledLink } from '../pageBase/pageBase.styled';
 
 type Props = {};
 
@@ -17,23 +17,21 @@ const FriendPage: FC<Props> = () => {
       };
 
     const handleClaimClick = (): void => {
-        console.log(PageDataContext); //working here
-
         if(name) {
             updateRewardCount(totalRewards + 1);
-            updateMessages(`Your friend ${name} earned you a reward!`, messages)
-            console.log(totalRewards, messages)
+            setName("");
+            updateMessages({icon: 0, message:`Your friend ${name} earned you a reward!`}, messages)
         }
     }
      
     const handleRejectClick = (): void => {
-             updateMessages(rejectionMessage, messages)
-             console.log(messages);
+             updateMessages({icon: 1, message: rejectionMessage}, messages)
     }
     
     return (
         <Page>
             <OuterPanel>
+                <StyledLink textAlign={"left"} to="/share">Share Page</StyledLink>
                 <InnerPanel>
                     <Header title={friendPageHeader} center />
                     <Content>

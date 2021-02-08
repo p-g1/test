@@ -15,7 +15,7 @@ const ShareBox: FC<ISocialBannerProps> = ({bannerItems}) => {
 
       const handleSendEmailClick = (): void => {
         if(email && email === senderEmail ) {
-            updateMessages(enteredOwnEmail, messages)
+            updateMessages({icon: 2, message: enteredOwnEmail}, messages)
         }
     }
 

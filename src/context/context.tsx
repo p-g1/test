@@ -1,15 +1,20 @@
 import React, { useState, FC } from 'react';
 
+type messageIcon = {
+    icon: number,
+    message: string
+}
+
 type DefaultContext = {
     totalRewards: number,
-    messages: string[],
+    messages: messageIcon[],
     updateRewardCount: (newValue:number) => void
-    updateMessages: (newValue:string, messages:string[]) => void
+    updateMessages: (newValue:messageIcon, messages:messageIcon[]) => void
 }
 
 const initialState: DefaultContext = {
     totalRewards: 0, 
-    messages: ["test"], 
+    messages: [], 
     updateRewardCount: () => {},
     updateMessages: () => {}
 };
@@ -29,9 +34,8 @@ const PageDataProvider: FC<Props> = ({children}) => {
         setTotalRewards(newValue);
     }
 
-    const updateMessages = (newValue: string, messages: string[]) => {
+    const updateMessages = (newValue: messageIcon, messages: messageIcon[]) => {
         messages.unshift(newValue);
-        console.log(messages);
         setMessages([...messages]);
     }
 
@@ -42,8 +46,6 @@ const PageDataProvider: FC<Props> = ({children}) => {
         updateMessages
     }
 
-    // PageDataContext = React.createContext(contextValue);
-    // console.log(PageDataContext);
     return (
         <PageDataContext.Provider value={contextValue}>
             {children}

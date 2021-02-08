@@ -12,19 +12,19 @@ const staticData =
     enteredOwnEmail: "You tried to refer yourself! Whoops!",
     socialBanner: [
         {
-            id: "email",
+            id: 0,
             background: "#9B9B9B"
         },
         {
-            id: "twitter",
+            id: 1,
             background: "#2AA0E9"
         },
         {
-            id: "facebook",
+            id: 2,
             background: "#1162A8"
         },
         {
-            id: "chain",
+            id: 3,
             background: "#499F00"
         },
     ],
