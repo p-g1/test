@@ -1,5 +1,7 @@
 npm run start to open project. 
 
-link to friend page will be top right. Link back to share page will appear top left on friend page. 
+all functionality implemented. 
 
-Some tests outstanding - coverage at 83%.
+link to friend page will be top right above panel on share page. Link back to share page will appear top left on friend page. 
+
+Some tests outstanding - coverage at 83%. npm run test--coverage script to show.
