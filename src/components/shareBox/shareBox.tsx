@@ -1,19 +1,19 @@
 import React, { useState, useContext, FC } from 'react';
 import SocialBanner, { ISocialBannerProps } from '../socialBanner/socialBanner';
-import { PageDataContext } from '../../context/context';
+import { PageDataContext, IDefaultContext } from '../../context/context';
 import { Panel, Button, Email, SenderInfo, EmailInput, EmailText } from './shareBox.styled';
 import staticData from '../../staticData/staticData';
 
 const ShareBox: FC<ISocialBannerProps> = ({bannerItems}) => {
     const { enteredOwnEmail, senderEmail, emailText } = staticData;
-    const {messages, updateMessages} = useContext(PageDataContext);
-    const [email, setEmail] = useState('');
+    const {messages, updateMessages} = useContext<IDefaultContext>(PageDataContext);
+    const [email, setEmail] = useState<string>('');
     
-    const updateEmail = (e: any) => {
+    const updateEmail = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setEmail(e.target.value);
       };
 
-      const handleSendEmailClick = (): void => {
+    const handleSendEmailClick = (): void => {
         if(email && email === senderEmail ) {
             updateMessages({icon: 2, message: enteredOwnEmail}, messages)
         }

@@ -9,7 +9,7 @@ interface IShareLinkProps {
 
 const ShareLink: FC<IShareLinkProps> = ({link}) => {
   
-  function copyToClipboard() {
+  const copyToClipboard = () => {
       const text = document.getElementById("link")?.innerText || "";
       navigator.clipboard.writeText(text);
     };

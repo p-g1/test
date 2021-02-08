@@ -8,7 +8,6 @@ import { Page, OuterPanel, InnerPanel, SmallHeader, StyledLink } from '../pageBa
 
 
 const SharePage: FC = () => {
-
     const { header, linkHeader, socialBanner } = staticData;
 
     return (

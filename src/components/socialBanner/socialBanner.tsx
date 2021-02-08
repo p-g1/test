@@ -6,12 +6,10 @@ export interface ISocialBannerProps {
     bannerItems: ISocialBannerItemProps[]
 }
 
-const SocialBanner: FC<ISocialBannerProps> = ({bannerItems}) => {
-    return (
+const SocialBanner: FC<ISocialBannerProps> = ({bannerItems}) => (
         <Banner>
             {bannerItems.map((item, i) => <SocialBannerItem id={item.id} key={item.id + i} background={item.background}/>)}
         </Banner>
-    )
-}
+)
 
 export default SocialBanner;

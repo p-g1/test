@@ -3,13 +3,12 @@ import { Panel, WelcomeMessage, Header, Container } from './activityFeed.styled'
 import FeedItem from '../feedItem/feedItem';
 import RewardsCount from '../rewardsCount/rewardsCount';
 import staticData from '../../staticData/staticData';
-import { PageDataContext } from '../../context/context';
+import { PageDataContext, IDefaultContext } from '../../context/context';
 import { faSmile, faSadTear, faGrinSquint, faMeh } from "@fortawesome/free-solid-svg-icons";
 
 const ActivityFeed: FC = () => {
-
     const emojis = [faSmile, faSadTear, faGrinSquint, faMeh];
-    const { totalRewards, messages } = useContext(PageDataContext);
+    const { totalRewards, messages } = useContext<IDefaultContext>(PageDataContext);
     const { welcomeMessage, welcomeMessageWithReferrals, emptyActivityFeed, rewardCountHeader } = staticData;
 
     return (

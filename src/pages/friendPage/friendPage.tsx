@@ -1,18 +1,18 @@
 import React, { useState, useContext, FC } from 'react';
 import staticData from '../../staticData/staticData';
 import Header from '../../components/header/header';
-import { PageDataContext } from '../../context/context';
+import { PageDataContext, IDefaultContext } from '../../context/context';
 import { Content, InputHolder, ButtonHolder, Button } from './friendPage.styled';
 import { Page, OuterPanel, InnerPanel, SmallHeader, StyledLink } from '../pageBase/pageBase.styled';
 
 interface IProps {};
 
 const FriendPage: FC<IProps> = () => {
-    const [name, setName] = useState('');
+    const [name, setName] = useState<string>('');
     const { friendPageHeader, nameInputHeader, rejectionMessage } = staticData;
-    const {totalRewards, messages, updateRewardCount, updateMessages} = useContext(PageDataContext);
+    const {totalRewards, messages, updateRewardCount, updateMessages} = useContext<IDefaultContext>(PageDataContext);
 
-    const updateName = (e: any) => {
+    const updateName = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setName(e.target.value);
       };
 
