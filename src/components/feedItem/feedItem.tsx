@@ -10,9 +10,10 @@ interface IFeedItemProps {
 const FeedItem: FC<IFeedItemProps> = ({emoji, text}) => {
     return (
         <Item>
-            <Emoji>
-                <FontAwesomeIcon icon={emoji} size="2x" /> 
-            </Emoji>
+            {emoji && <Emoji>
+                        <FontAwesomeIcon icon={emoji} size="2x" /> 
+                     </Emoji>
+            }
             <Text>{text}</Text>
         </Item>
     )
