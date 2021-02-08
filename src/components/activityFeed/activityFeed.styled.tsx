@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Panel = styled.div`
   height: 165px;
   overflow-x: hidden;
-  overflow-y:scroll
+  overflow-y:scroll;
+  width: 100%;
 
   & >div:nth-child(even) {
     background: #EFEFEF;
@@ -29,4 +30,9 @@ export const WelcomeMessage = styled.div`
   align-items: center;
   background: #fff;
   padding: 20px 0px;
+  width: 100%;
+`;
+
+export const Container = styled.div`
+  width: 100%;
 `;

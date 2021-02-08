@@ -1,5 +1,5 @@
 import React, { useContext, FC } from 'react';
-import { Panel, WelcomeMessage, Header } from './activityFeed.styled';
+import { Panel, WelcomeMessage, Header, Container } from './activityFeed.styled';
 import FeedItem from '../feedItem/feedItem';
 import RewardsCount from '../rewardsCount/rewardsCount';
 import staticData from '../../staticData/staticData';
@@ -13,7 +13,7 @@ const ActivityFeed: FC = () => {
     const { welcomeMessage, welcomeMessageWithReferrals, emptyActivityFeed, rewardCountHeader } = staticData;
 
     return (
-        <div>
+        <Container>
             <WelcomeMessage>
                 {totalRewards ?
                      welcomeMessageWithReferrals
@@ -32,7 +32,7 @@ const ActivityFeed: FC = () => {
                 title={rewardCountHeader} 
                 count={totalRewards}
             />
-        </div>
+        </Container>
     )
 }
 
