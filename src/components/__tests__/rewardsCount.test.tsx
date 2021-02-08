@@ -3,7 +3,7 @@ import { render} from '@testing-library/react';
 import RewardsCount from '../rewardsCount/rewardsCount';
 
 test('renders rewardsCount', () => {
-  render(<RewardsCount title={"test"} count={1}/>);
-  // const linkElement = screen.getByText(/learn react/i);
-  // expect(linkElement).toBeInTheDocument();
+    const { getByText } = render(<RewardsCount title={"test"} count={1}/>);
+    const text = getByText("test");
+    expect(text).toBeInTheDocument();
 });

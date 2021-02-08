@@ -32,15 +32,15 @@ const FriendPage: FC<IProps> = () => {
         <Page>
             <OuterPanel>
                 <StyledLink textalign={"left"} to="/share">Share Page</StyledLink>
-                <InnerPanel>
+                <InnerPanel data-testId={"friendPage"}>
                     <Header title={friendPageHeader} center />
                     <Content>
                         <InputHolder>
                         <SmallHeader>{nameInputHeader}</SmallHeader>
-                            <input value={name} onChange={e => updateName(e)}/>
+                            <input data-testId={"emailInput"} value={name} onChange={e => updateName(e)}/>
                         </InputHolder>
                         <ButtonHolder>
-                            <Button onClick={handleClaimClick} disabled={!name}>Claim</Button>
+                            <Button data-testId={"claimButton"} onClick={handleClaimClick} disabled={!name}>Claim</Button>
                             <Button onClick={handleRejectClick} >Reject</Button>
                         </ButtonHolder>
                     </Content>

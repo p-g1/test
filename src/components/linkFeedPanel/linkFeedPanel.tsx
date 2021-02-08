@@ -9,7 +9,7 @@ const LinkFeedPanel: FC = () => {
   const { link } = staticData;
 
     return (
-        <Panel>
+        <Panel data-testid={"linkFeedPanel"}>
           <ShareLink link={link}/>
           <ActivityFeed />
         </Panel>

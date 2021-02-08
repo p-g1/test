@@ -23,8 +23,8 @@ const ShareBox: FC<ISocialBannerProps> = ({bannerItems}) => {
         <Panel>
             <SocialBanner bannerItems={bannerItems}/>
             <SenderInfo>From <Email>{senderEmail}</Email></SenderInfo>
-            <EmailInput value={email} onChange={e => updateEmail(e)} placeholder="Email address" />
-            <EmailText value={emailText}></EmailText>
+            <EmailInput value={email} readOnly onChange={e => updateEmail(e)} placeholder="Email address" />
+            <EmailText value={emailText} readOnly></EmailText>
             <Button onClick={handleSendEmailClick} disabled={!email}>Send Email</Button>
         </Panel>
     )

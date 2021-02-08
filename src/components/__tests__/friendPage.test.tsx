@@ -4,10 +4,24 @@ import FriendPage from '../../pages/friendPage/friendPage';
 import { BrowserRouter as Router } from "react-router-dom";
 
 test('renders friendPage', () => {
-  render(<Router>
-            <FriendPage />
-         </Router>
-         );
-  // const linkElement = screen.getByText(/learn react/i);
-  // expect(linkElement).toBeInTheDocument();
+    const { getByTestId } = render(<Router>
+                                    <FriendPage />
+                                </Router>
+                                );
+    const header = getByTestId("friendPage");
+    expect(header).toBeInTheDocument();
+});
+
+test('renders friendPage with disabled claim button', () => {
+    const { getByTestId } = render(<Router>
+                                    <FriendPage />
+                                </Router>
+                                );
+    const button = getByTestId("claimButton");
+    expect(button).toHaveAttribute("disabled");
+
+    const emailInput = getByTestId("emailInput");
+    
+    (emailInput as HTMLInputElement).value = "test@email";
+    expect(button).not.toHaveAttribute("enabled");
 });

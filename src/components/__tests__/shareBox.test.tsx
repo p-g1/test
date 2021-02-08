@@ -3,8 +3,7 @@ import { render} from '@testing-library/react';
 import ShareBox from '../shareBox/shareBox';
 
 test('renders shareBox', () => {
-  render(<ShareBox bannerItems={[{id: 1, background: "#fff"}]} />);
-
-  // const linkElement = screen.getByText(/learn react/i);
-  // expect(linkElement).toBeInTheDocument();
+    const { getByTestId } = render(<ShareBox bannerItems={[{id: 1, background: "#fff"}]} />);
+    const text = getByTestId("banner-item");
+    expect(text).toBeInTheDocument();
 });

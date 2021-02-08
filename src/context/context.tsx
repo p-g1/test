@@ -1,11 +1,11 @@
 import React, { useState, FC } from 'react';
 
-interface ImessageIcon {
+export interface ImessageIcon {
     icon: number,
     message: string
 }
 
-interface IDefaultContext {
+export interface IDefaultContext {
     totalRewards: number,
     messages: ImessageIcon[],
     updateRewardCount: (newValue:number) => void

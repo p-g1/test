@@ -13,7 +13,7 @@ const SocialBannerItem: FC<ISocialBannerItemProps> = ({id, background}) => {
     const icons = [faEnvelope, faFacebookF, faTwitter, faLinkedinIn]
 
     return (
-        <Item background={background}>
+        <Item data-testid={"banner-item"} background={background}>
            <FontAwesomeIcon icon={icons[id]} size="2x" /> 
         </Item>  
     )
