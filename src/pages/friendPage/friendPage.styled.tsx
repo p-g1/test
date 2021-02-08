@@ -23,3 +23,11 @@ export const ButtonHolder = styled.div`
   align-items: center;
   padding: 20px;
 `;
+
+export const Button = styled.button`
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+`;

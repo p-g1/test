@@ -48,6 +48,10 @@ export const EmailInput = styled.input`
   width: 86%;
   border: none;
   margin: 10px;
+  color: #9D9D9D;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 `;
 
 export const EmailText = styled.textarea`
@@ -56,4 +60,9 @@ export const EmailText = styled.textarea`
   height: 100px;
   border: none;
   margin: 10px;
+  resize: none;
+  color: #9D9D9D;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 `;

@@ -2,7 +2,7 @@ import React, { useState, useContext, FC } from 'react';
 import staticData from '../../staticData/staticData';
 import Header from '../../components/header/header';
 import { PageDataContext } from '../../context/context';
-import { Content, InputHolder, ButtonHolder } from './friendPage.styled';
+import { Content, InputHolder, ButtonHolder, Button } from './friendPage.styled';
 import { Page, OuterPanel, InnerPanel, SmallHeader, StyledLink } from '../pageBase/pageBase.styled';
 
 interface IProps {};
@@ -40,8 +40,8 @@ const FriendPage: FC<IProps> = () => {
                             <input value={name} onChange={e => updateName(e)}/>
                         </InputHolder>
                         <ButtonHolder>
-                            <button onClick={handleClaimClick} disabled={!name}>Claim</button>
-                            <button onClick={handleRejectClick} >Reject</button>
+                            <Button onClick={handleClaimClick} disabled={!name}>Claim</Button>
+                            <Button onClick={handleRejectClick} >Reject</Button>
                         </ButtonHolder>
                     </Content>
                 </InnerPanel>

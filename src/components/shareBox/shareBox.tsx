@@ -5,7 +5,7 @@ import { Panel, Button, Email, SenderInfo, EmailInput, EmailText } from './share
 import staticData from '../../staticData/staticData';
 
 const ShareBox: FC<ISocialBannerProps> = ({bannerItems}) => {
-    const { enteredOwnEmail, senderEmail } = staticData;
+    const { enteredOwnEmail, senderEmail, emailText } = staticData;
     const {messages, updateMessages} = useContext(PageDataContext);
     const [email, setEmail] = useState('');
     
@@ -24,7 +24,7 @@ const ShareBox: FC<ISocialBannerProps> = ({bannerItems}) => {
             <SocialBanner bannerItems={bannerItems}/>
             <SenderInfo>From <Email>{senderEmail}</Email></SenderInfo>
             <EmailInput value={email} onChange={e => updateEmail(e)} placeholder="Email address" />
-            <EmailText></EmailText>
+            <EmailText value={emailText}></EmailText>
             <Button onClick={handleSendEmailClick} disabled={!email}>Send Email</Button>
         </Panel>
     )

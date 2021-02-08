@@ -10,6 +10,12 @@ const staticData =
     rejectionMessage: "A friend visitied your link, but didn't earn you a reward!",
     senderEmail: "pete@buyapowa.com",
     enteredOwnEmail: "You tried to refer yourself! Whoops!",
+    emailText: 
+      `To my good friend,
+    
+please buy the things here:
+    
+http://thethings/abc`,
     socialBanner: [
         {
             id: 0,
